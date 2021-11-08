@@ -1,13 +1,14 @@
+import { ChakraProvider } from '@chakra-ui/react';
+
 import { AppRoutes } from './routes';
 
-import { GlobalStyle } from './styles/global';
+import { theme } from './styles/theme';
 
 export function App() {
   return (
-    <>
+    <ChakraProvider resetCSS theme={theme}>
       <AppRoutes />
-      <GlobalStyle />
-    </>
+    </ChakraProvider>
   );
 }
 
